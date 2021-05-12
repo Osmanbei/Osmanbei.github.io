@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html,
+    body,
+    header,
+    .carousel{
+      height: 60vh;
+    }
+    @media (max-width: 740px){
+      html,
+      body,
+      header,
+    .carousel{
+      height: 100vh;
+    }
+  }
+    @media (min-width: 800px) and (max-width: 850px){
+      html,
+      body,
+      header,
+    .carousel{
+      height: 100vh;
+    }
+  }
+  .aa_bi_head {
+    background-color: #F7F7F7;
+    font-size: 87.5%;
+    display: flex;
+  }
+  .aa_bih_name {
+    padding: 15px 0px 15px 20px;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  .aa_bih_pcs, .aa_bit_pcs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+  }
+  .aa_bih_price, .aa_bit_price {
+    display: flex;
+    justify-content: center;
+    flex-basis: 30%;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  .aa_bih_price, .aa_bih_count, .aa_bih_summ, .aa_bih_bonus {
+    padding: 15px 0;
+  }
+  .aa_bih_count, .aa_bit_count {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 30%;
+    flex-grow: 1;
+  }
+  .aa_bih_bonus, .aa_bit_bonus {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 30%;
+    flex-grow: 1;
+  }
+  .aa_bih_summ, .aa_bit_summ {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 30%;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .aa_bih_del, .aa_bit_del {
+    display: flex;
+    justify-content: center;
+    flex-basis: 10%;
+    flex-grow: 1;
+  }
+  .aa_bi_tovs {
+    font-size: 112.5%;
+  }
+  .aa_bi_tov {
+    border-bottom: 1px dashed #E3E2E7;
+    padding: 20px 0 20px;
+    margin: 0 0 10px;
+    min-height: 120px;
+    display: flex;
+  }
+  .aa_basket_btns.mobile {
+    display: none;
+  }
+  .aa_basket_btns {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 25px;
+    background: #F7F7F7;
+  }
+  .bx_ordercart .aa_bi_result {
+    width: 100%;
+  }
+  .aa_basket_btn_order {
+    background-color: #ec0093;
+    color: #ffffff;
+}
+.aa_basket_btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 110%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px 0px 10px;
+  }
+  .iprel {
+    position: relative;
+  }
+  a, .ia {
+    -webkit-transition: color 0.5s ease 0s;
+    -moz-transition: color 0.5s ease 0s;
+    -o-transition: color 0.5s ease 0s;
+    transition: color 0.5s ease 0s;
+    text-decoration: none;
+    color: #0075CD;
+    cursor: pointer;
+  }
+  .aa_action_ordertitle {
+    margin: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .bx_ordercart_order_pay {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 25px;
+    background: #F7F7F7;
+    margin-right: 40px;
+  }
+  h2 {
+    font-size: 130%;
+    margin-bottom: 10px !important;
+  }
+  h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    color: #322F38;
+    margin: 10px 0;
+  }
+  .bx_ordercart .bx_ordercart_coupon {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.aa_ombf_field {
+    margin: 0 0 10px;
+}
+.mechta .aa_action_ordertitle input {
+    border-radius: 0px;
+    border: 1px solid #E3E2E7;
+    font-size: 75%;
+    margin-right: 20px;
+    height: 40px;
+}
+.mechta input[type='text'], .mechta input[type='number'], .mechta input[type='tel'], .mechta input[type='password'], .mechta select, .mechta textarea {
+    border: 1px solid #ccc;
+    padding: 8px 8px;
+    color: #322F38;
+    font-size: 100%;
+    width: 100%;
+    border-radius: 3px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Tahoma, Arial, sans-serif;
+    outline: medium none ! important;
+    -webkit-appearance: none;
+}
+.aa_basket_btn.aa_basket_btn_coupon {
+    background-color: transparent;
+    border: 2px solid #EC0094;
+    border-radius: 4px;
+    align-items: center;
+    display: flex;
+}
+.aa_basket_btn.aa_basket_btn_coupon a {
+    color: #ec0093;
+    font-size: 87.5%;
+}
+.aa_basket_btn a {
+    color: #ec0093;
+}
+.aa_basket_fast_order {
+
+    display: flex;
+    flex-grow: 1;
+    padding: 25px;
+    flex-direction: column;
+    max-width: 150px;
+}
+.aa_basket_btns {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 25px;
+    background: #F7F7F7;
+    max-width: 450px;
+}
+.aa_basket_btn{
+  margin: 15px;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand waves-effect">
+      <strong class="blue-text">Techno-Dream</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toogle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="new-items.html" class="nav-link waves-effect">Новинки</a>
+        </li>
+        <li class="nav-item">
+          <a href="smartphones.html" class="nav-link waves-effect">Смартфоны</a>
+        </li>
+        <li class="nav-item">
+          <a href="laptops.html" class="nav-link waves-effect">Ноутбуки</a>
+        </li>
+        <li class="nav-item">
+          <a href="tablets.html" class="nav-link waves-effect">Планшеты</a> 
+        </li>
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+          <a href="basket.html" class="nav-link waves-effect">
+            <span class="badge red x-depth-1 mr-1"></span>
+            <i class="fa fa-shopping-cart"></i>
+            <span class="clearfix d-none d-sm-inline-block">Cart</span>
+          </a> 
+        </li>
+        <li class="nav-item">
+          <a href="https://www.facebook.com" class="nav-link waves-effect">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.twitter.com" class="nav-link waves-effect">
+            <i class=" fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.github.com" class="nav-link border border-light rounded waves-effect">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br/><br/><br/><br/>
+<div id="basket_form_container" style="max-width: 1300px; margin-left: 100px;">
+  
+				<div class="bx_ordercart">
+					
+        <div class="aa_basketitems_list">
+        <div class="bx_ordercart_order_table_container">
+            <div class="aa_bi_head">
+                <div class="aa_bih_name">Наименование</div>
+                <div class="aa_bih_pcs">
+                    <div class="aa_bih_price">Цена</div>
+                    <div class="aa_bih_count">Количество</div>
+                    <div class="aa_bih_bonus">Бонус</div>
+                    <div class="aa_bih_summ">Сумма</div>
+                    <div class="aa_bih_del"></div>
+                </div>
+            </div>
+
+            
+
+                                                </div>
+        </div>
+        <input type="hidden" id="column_headers" value="">
+        <input type="hidden" id="offers_props" value="">
+        <input type="hidden" id="action_var" value="action">
+        <input type="hidden" id="quantity_float" value="N">
+        <input type="hidden" id="count_discount_4_all_quantity" value="N">
+        <input type="hidden" id="price_vat_show_value" value="N">
+        <input type="hidden" id="hide_coupon" value="N">
+        <input type="hidden" id="use_prepayment" value="N">
+
+    </div>
+    <div class="aa_basket_btns mobile">
+        <div class="aa_bi_result">
+            <div class="aa_bi_full_sum">
+                <div class="aa_bias_text">Сумма:</div>
+                <div class="aa_bias_summ  j_aa_bonussumm icblack">151 980 тг.</div>
+            </div>
+                                        <div class="aa_bi_bonuses_bonus">
+                <span style="color:#ec0094" class="aa_bias_text">Бонусы: </span>
+                    <span style="color:#ec0094" class="aa_bias_summ_bonus">до 30 396 бонусов</span>
+                </div>
+                        <div class="aa_bi_allsumm icolor1">
+                <div class="aa_bias_text">Итого:</div>
+                <div class="aa_bias_summ jq_aa_bias_summ">151&nbsp;980&nbsp;тг.</div>
+            </div>
+        </div>
+
+        <a href="order.php" class="aa_basket_btn aa_basket_btn_order iprel">
+            Оформление заказа
+        </a>
+    </div>
+    <!-- <div class="aa_action_ordertitle jq_aa_ordertitle">
+        <div class="bx_ordercart_order_pay">
+            <h2>Скидка по промокоду</h2>
+            <div class="bx_ordercart_order_pay_left" id="coupons_block">
+                            <div class="bx_ordercart_coupon aa_ombf_field">
+                    <span></span>
+                    <input type="text" id="coupon" name="COUPON" value="">
+                    <div class="aa_basket_btn aa_basket_btn_coupon" id="add_coupon"><a href="/personal/basket.php">Применить</a></div>
+                </div>            </div>
+        </div> -->
+        <div class="aa_basket_fast_order">
+        </div>
+        <div class="aa_basket_btns">
+            <div class="aa_bi_result">
+                <div class="aa_bi_full_sum">
+                    <div class="aa_bias_text">Сумма:</div>
+                    <div class="aa_bias_summ  j_aa_bonussumm icblack">189 980 тг.</div>
+                </div>
+                                    
+                    <div class="aa_bi_bonuses">
+                        <span class="aa_bias_text">Скидка: </span>
+                        <span class="aa_bias_summ j_aa_bonussumm icblack">38 000 тг.</span>
+                    </div>
+                                                    <div class="aa_bi_bonuses_bonus">
+                    <span style="color:#ec0094" class="aa_bias_text">Бонусы: </span>
+                        <span style="color:#ec0094" class="aa_bias_summ_bonus">до 30 396 бонусов</span>
+                    </div>
+                                <div class="aa_bi_allsumm icolor1">
+                    <div class="aa_bias_text">Итого:</div>
+                    <div class="aa_bias_summ jq_aa_bias_summ">151&nbsp;980&nbsp;тг.</div>
+                </div>
+            </div>
+
+            <a href="order.php" class="aa_basket_btn aa_basket_btn_order iprel">
+                Оформление заказа
+            </a>
+        </div>
+    </div>
+<div id="basket_items_delayed" class="bx_ordercart_order_table_container" style="display:none">
+  
+	<table id="delayed_items">
+		<thead>
+			<tr>
+				<td class="margin"></td>
+										<td class="item" colspan="2">
+																	</td>
+										<td class="price">
+																	</td>
+										<td class="custom">
+																	</td>
+										<td class="custom">
+																	</td>
+										<td class="custom">
+																	</td>
+									<td class="custom"></td>
+									<td class="margin"></td>
+			</tr>
+		</thead>
+
+		<tbody>
+					</tbody>
+
+	</table>
+</div>
+<div id="basket_items_subscribed" class="bx_ordercart_order_table_container" style="display:none">
+	<table>
+		<thead>
+			<tr>
+				<td class="margin"></td>
+										<td class="item" colspan="2">
+																	</td>
+										<td class="price">
+																	</td>
+										<td class="custom">
+																	</td>
+										<td class="custom">
+																	</td>
+										<td class="custom">
+																	</td>
+									<td class="custom"></td>
+					<td class="margin"></td>
+			</tr>
+		</thead>
+
+		<tbody>
+					</tbody>
+
+	</table>
+</div>
+<div id="basket_items_not_available" class="bx_ordercart_order_table_container" style="display:none">
+	<table>
+
+		<thead>
+			<tr>
+				<td class="margin"></td>
+										<td class="item" colspan="2">
+																	</td>
+										<td class="price">
+																	</td>
+										<td class="custom">
+																	</td>
+									<td class="custom"></td>
+									<td class="margin"></td>
+			</tr>
+		</thead>
+
+		<tbody>
+					</tbody>
+
+	</table>
+</div>
+				</div>
+			</div>
+<main>
+  <hr/>
+  <div class="container">
+    
+    
+          <div class="active-purple-3 active-purple-4 mb-4">
+            <input class="form-control" id="searchBar" type="text" placeholder="Search" aria-label="Search">
+          </div>
+          
+    <section class="text-center mb-4">
+      <div class="row animated fadeIn" id="FormSearch">
+  
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="page-footer text-center font-small mt-4 animated fadeIn">
+  <div class="pt-4">
+    <a href="index.html" role="button" class="btn btn-outline-white">WDB <i class="fa fa-graduation-cap ml-2"></i></a>
+    <a href="index.html" role="button" class="btn btn-outline-white">Online shop <i class="fa fa-graduation-cap ml-2"></i></a>
+  </div>
+  <hr class="my-4">
+  <div class="pb-4">
+    <a href="https://facebook.com">
+      <i class="fab fa-facebook-f mr-3"></i>
+    </a>
+    <a href="https://twitter.com">
+      <i class="fab fa-twitter mr-3"></i>
+    </a>
+    <a href="https://youtube.com">
+      <i class="fab fa-youtube mr-3"></i>
+    </a>
+    <a href="https://www.pinterest.com/">
+      <i class="fab fa-pinterest mr-3"></i>
+    </a>
+    <a href="https://vk.com">
+      <i class="fab fa-vk mr-3"></i>
+    </a>
+    <a href="https://www.telegram.com">
+      <i class="fab fa-telegram mr-3"></i>
+    </a>
+    <a href="https://github.com">
+      <i class="fab fa-github mr-3"></i>
+    </a>
+  </div>
+  <div class="footer-copyright py-3">
+    Techno-Dream
+  </div>
+</footer>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript"></script>
+  <script src="js/searchProducts.js"></script>
+  <script>
+    var array = [
+          {
+            "id": 1,
+            "name": "iPhone 12 512GB Blue",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/ac/ac142efd-0df3-11eb-a235-005056b6dbd7.jpeg",
+            "href": "shop-page_1.html",
+            "span": "NEW",
+            "span_color": "danger",
+            "price": 899,
+            "type": "smartphone",
+            "count": 0
+          },
+          {
+            "id": 2,
+            "name": "Macbook Pro 13 1TB",
+            "image": "https://object.pscloud.io/cms/cms/Photo/img_0_62_1836_0.jpg",
+            "href": "shop-page_2.html",
+            "span": "DISCOUNT",
+            "span_color": "primary",
+            "price": 1500,
+            "type": "laptop",
+            "count": 0
+          },
+          {
+            "id": 3,
+            "name": "IPad Pro 2020 11 inch",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/c4/c4adde3a-8397-11ea-a22d-005056b6dbd7.jpeg",
+            "href": "shop-page_3.html",
+            "span": "NEW",
+            "span_color": "danger",
+            "price": 999,
+            "type": "tablet",
+            "count": 0
+          },
+          {
+            "id": 4,
+            "name": "Samsung Galaxy A51",
+            "image": "https://technosale.kz/image/cache/catalog/Smartphones/Samsung/2020/A51%20Black-6-1000x1000.jpg",
+            "href": "shop-page_4.html",
+            "span": "TOP SELLING",
+            "span_color": "success",
+            "price": 299,
+            "type": "smartphone",
+            "count": 0
+          },
+          {
+            "id": 5,
+            "name": "Samsung Galaxy S20",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/85/85bc6679-57a9-11ea-a22d-005056b6dbd7.jpeg",
+            "href": "shop-page_5.html",
+            "span": "SHIT",
+            "span_color": "info",
+            "price": 950,
+            "type": "smartphone",
+            "count": 0
+          },
+          {
+            "id": 6,
+            "name": "Huawei Matebook X",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/01/01250bf9-54cd-11e8-a210-005056b6dbd7.jpeg",
+            "href": "shop-page_6.html",
+            "span": "LIMITED",
+            "span_color": "warning",
+            "price": 1199,
+            "type": "laptop",
+            "count": 0
+          },
+          {
+            "id": 7,
+            "name": "Huawei Mate 30 Pro",
+            "image": "https://megagadget.kz/image/cache/catalog/mate30%20fio-1000x1000.jpg",
+            "href": "shop-page_7.html",
+            "span": "NEW",
+            "span_color": "danger",
+            "price": 999,
+            "type": "smartphone",
+            "count": 0
+          },
+          {
+            "id": 8,
+            "name": "IPhone 12 Mini 64GB",
+            "image": "https://apples.kz/image/cache/catalog/2020%20products/iphone%2012/mini/%20%D0%BC%D0%B8%D0%BC%D0%B8%2012-1000x1000.jpg",
+            "href": "shop-page_8.html",
+            "span": "NEW",
+            "span_color": "danger",
+            "price": 699,
+            "type": "smartphone",
+            "count": 0
+          },
+          {
+            "id": 9,
+            "name": "IPhone 12 Pro 64GB Blue",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/ac/ac142f15-0df3-11eb-a235-005056b6dbd7.jpeg",
+            "href": "shop-page_9.html",
+            "span": "NEW",
+            "span_color": "danger",
+            "price": 999,
+            "type": "smartphone",
+            "count": 0
+          },
+          {
+            "id": 10,
+            "name": "IPhone 12 Pro 64GB Silver",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/49/49a6003c-0e9c-11eb-a235-005056b6dbd7.jpeg",
+            "href": "shop-page_10.html",
+            "span": "NEW",
+            "span_color": "danger",
+            "price": 999,
+            "type": "smartphone",
+            "count": 0
+          },
+          {
+            "id": 11,
+            "name": "IPhone 12 Pro 64GB Grey",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/ac/ac142f14-0df3-11eb-a235-005056b6dbd7.jpeg",
+            "href": "shop-page_11.html",
+            "span": "NEW",
+            "span_color": "danger",
+            "price": 999,
+            "type": "smartphone",
+            "count": 0
+          },
+          {
+            "id": 12,
+            "name": "ASUS Zenbook UX534FTC",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/6b/6b2460ae-e75e-11ea-a230-005056b6dbd7.jpeg",
+            "href": "shop-page_12.html",
+            "span": "PRIMARY",
+            "span_color": "info",
+            "price": 1400,
+            "type": "laptop",
+            "count": 0
+          },
+          {
+            "id": 13,
+            "name": "HP ENVY 13-ba0006ur",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/fb/fb22101f-0460-11eb-a231-005056b6dbd7.jpeg",
+            "href": "shop-page_13.html",
+            "span": "OUT",
+            "span_color": "primary",
+            "price": 1200,
+            "type": "laptop",
+            "count": 0
+          },
+          {
+            "id": 14,
+            "name": "iPad Air 10,5 inch 64GB",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/c5/c526025e-59b7-11e9-a220-005056b6dbd7.jpeg",
+            "href": "shop-page_14.html",
+            "span": "BEST",
+            "span_color": "secondary",
+            "price": 900,
+            "type": "tablet",
+            "count": 0
+          },
+          {
+            "id": 15,
+            "name": "iPad mini 5 64Gb",
+            "image": "https://www.mechta.kz/export/1cbitrix/import_files/65/651ac2a7-e4f8-11e9-a22b-005056b6dbd7.jpeg",
+            "href": "shop-page_15.html",
+            "span": "BEST PRICE",
+            "span_color": "success",
+            "price": 500,
+            "type": "tablet",
+            "count": 0
+          },
+          { 
+            'id': 16, 
+            'name': "iPad New 2019 32GB",
+            'image': "https://www.mechta.kz/export/1cbitrix/import_files/32/3297d5dd-f3b6-11e9-a22b-005056b6dbd7.jpeg",
+            'href': "shop-page_16.html",
+            'span': "CHEAP",
+            'span_color': "danger",
+            'price': 300,
+            'type': "tablet",
+            'count': 0
+          }
+        ]
+$("#searchBar").on('keyup', function() {
+    var value = $(this).val()
+    console.log('Value: ', value)
+    var data = searchTable(value, array)
+    buildTable(data)
+})
+
+buildTable(array);
+
+function searchTable(value, data) {
+  value = 'laptop'
+    var filteredData = []
+
+    for (var i = 0; i < data.length; i++) {
+        // value = value.toLowerCase()
+        var name = data[i].name.toLowerCase()
+        var type = data[i].type.toLowerCase()
+        if (type.includes(value) || name.includes(value)) {
+            filteredData.push(data[i])
+        }
+    }
+
+    return filteredData
+}
+
+function buildTable(data) {
+
+    var table = document.getElementById('FormSearch')
+
+    table.innerHTML = ''
+
+    const htmlString = data
+        .map((product) => {
+            return `
+            <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+
+            <div class="view overlay">
+              <img class="card-img-top" src="${product.image}">
+              <a href="${product.href}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <div class="card-body text-center">
+              <h5>
+                <strong>
+                  <a href="${product.href}" class="dark-grey-text">${product.name} <span class="badge badge-pill ${product.span_color}-color">${product.span}</span></a>
+                </strong>
+              </h5>
+              <h4 class="font-weight-bold green-text">
+                <strong>${product.price}$</strong>
+              </h4>
+            </div>
+
+          </div>
+        </div>
+        `;
+        })
+        .join('');
+        
+    table.innerHTML = htmlString;
+}
+  </script>
+</body>
+</html>
