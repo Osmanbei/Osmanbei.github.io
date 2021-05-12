@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Index</title>
+  
+  <link rel="icon" href="img/shopping-cart.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="css/mdb.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/main-style.css">
+
+  <link rel="stylesheet" href="libs/modal/modal.css">
+
+  <style>
+    html,
+    body,
+    header,
+    .carousel{
+      height: 60vh;
+    }
+    @media (max-width: 740px){
+      html,
+      body,
+      header,
+      .carousel{
+        height: 100vh;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 850px){
+      html,
+      body,
+      header,
+      .carousel{
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand waves-effect">
+      <strong class="blue-text">Techno-Dream</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toogle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a href="new-items.html" class="nav-link waves-effect">Новинки</a>
+        </li>
+        <li class="nav-item">
+          <a href="smartphones.html" class="nav-link waves-effect">Смартфоны</a>
+        </li>
+        <li class="nav-item">
+          <a href="laptops.html" class="nav-link waves-effect">Ноутбуки</a>
+        </li>
+        <li class="nav-item">
+          <a href="tablets.html" class="nav-link waves-effect">Планшеты</a> 
+        </li>
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+          <div class="header__cart cart" tabindex="0">
+            <div class="cart__text" >
+              <i class="fa fa-shopping-cart"></i>
+             
+              <span class="cart__quantity badge red x-depth-1 mr-1">0</span>
+            </div>
+            <div class="cart-content">
+              <ul class="cart-content__list" data-simplebar>
+              </ul>
+              <div class="cart-content__bottom">
+                <div class="cart-content__fullprice">
+                  <span>Итого:</span>
+                  <span class="fullprice">0 $</span>
+                </div>
+                <button class="cart-content__btn btn" data-graph-path="modal" data-graph-animation="fadeInUp">Оформить заказ</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <li class="nav-item">
+          <a href="https://www.facebook.com" class="nav-link waves-effect">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.twitter.com" class="nav-link waves-effect">
+            <i class=" fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.github.com" class="nav-link border border-light rounded waves-effect">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav><br><br>
+<div id="carousel-ex" class="carousel slide carousel-fade pt-4" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li class="active" data-target="#carousel-ex" data-slide-to="0"></li>
+    <li data-target="#carousel-ex" data-slide-to="1"></li>
+    <li data-target="#carousel-ex" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <a href="discount-page.html">
+        <div  class="view" style="background-image: url('https://www.technodom.kz/under/big_sale/new2/bigsale_cash.png');
+            background-repeat: no-repeat; background-size: cover;">
+        </div>
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="iphones-mini.html">
+        <div  class="view" style="background-image: url('https://www.technodom.kz/under/banners/iphone12/main12.png');
+            background-repeat: no-repeat; background-size: cover;">
+        </div>
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="ipad-page.html">
+        <div  class="view" style="background-image: url('https://www.technodom.kz/under/ipad-air/1318ipadair.png');
+            background-repeat: no-repeat; background-size: cover;">
+        </div>
+      </a>
+    </div>
+  </div>
+  <a href="#carousel-ex" class="carousel-control-prev" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a href="#carousel-ex" class="carousel-control-next" role="button" data-slide="prev">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
+
+<main class="content">
+  <br/>
+  <div class="container">
+    <div class="active-purple-3 active-purple-4 mb-4">
+      <input class="form-control" id="searchBar" type="text" placeholder="Search" aria-label="Search">
+    </div>
+    <section class="text-center mb-4" >
+      <ul class="products-grid" id="FormSearch">
+        
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="page-footer text-center font-small mt-4 animated fadeIn">
+  <hr class="my-4">
+  <div class="pb-4">
+    <a href="https://facebook.com">
+      <i class="fab fa-facebook-f mr-3"></i>
+    </a>
+    <a href="https://twitter.com">
+      <i class="fab fa-twitter mr-3"></i>
+    </a>
+    <a href="https://youtube.com">
+      <i class="fab fa-youtube mr-3"></i>
+    </a>
+    <a href="https://www.pinterest.com/">
+      <i class="fab fa-pinterest mr-3"></i>
+    </a>
+    <a href="https://vk.com">
+      <i class="fab fa-vk mr-3"></i>
+    </a>
+    <a href="https://www.telegram.com">
+      <i class="fab fa-telegram mr-3"></i>
+    </a>
+    <a href="https://github.com">
+      <i class="fab fa-github mr-3"></i>
+    </a>
+  </div>
+  <div class="footer-copyright py-3">
+    Techno-Dream
+  </div>
+</footer>
+<div class="modal">
+  <div class="modal__container order-modal" role="dialog" aria-modal="true" data-graph-target="modal">
+    <div class="modal-content order-modal__content">
+      <div class="order-modal__top">
+        <h2 class="order-modal__title">Оформление заказа</h2>
+        <span class="order-modal__number">Заказ № </span>
+      </div>
+      <div class="order-modal__info">
+        <div class="order-modal__quantity order-modal__info-item">Товаров в заказе: <span>0 шт</span></div>
+        <div class="order-modal__summ order-modal__info-item">Общая сумма заказа: <span> $</span></div>
+        <div class="order-modal__products order-modal__info-item">
+          <button class="order-modal__btn">Состав заказа</button>
+          <ul class="order-modal__list">
+            <!-- <li class="order-modal__item">
+              <article class="order-modal__product order-product">
+                <img src="img/macbook.jpg" alt="" class="order-product__img">
+                <div class="order-product__text">
+                  <h3 class="order-product__title">Ноутбук Apple MacBook Pro 16 TB i7 2.6/16/512 SSD SG MVVJ2RU/A</h3>
+                  <span class="order-product__price">190 789 ₽ </span>
+                </div>
+                <button class="order-product__delete">Удалить</button>
+              </article>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <form action="#" class="order-modal__form order">
+        <input type="hidden" name="theme" value="Обратный звонок">
+        <input type="hidden" name="admin_email[]" value="maxgraph23@gmail.com">
+        <input type="hidden" name="form_subject" value="Заявка с сайта Сайт">
+        <label class="order__label">
+          <span class="order__text">Ваше имя</span>
+          <input type="text" name="Имя" class="order__input">
+        </label>
+        <label class="order__label">
+          <span class="order__text">Номер телефона</span>
+          <input type="tel" name="Телефон" class="order__input" placeholder="+7 (___)___-__-__">
+        </label>
+        <label class="order__label">
+          <span class="order__text">Ваше имя</span>
+          <input type="email" name="Email" class="order__input" placeholder="post@gmail.com">
+        </label>
+        <button class="order__btn btn">Оформить заказ</button>
+      </form>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/products-info.js"></script>
+  <script type="text/javascript" src="js/search.js"></script>
+  <script type="text/javascript" src="js/simplebar.js"></script>
+  <script type="text/javascript" src="libs/modal/modal.js"></script>
+  <script type="text/javascript" src="js/product.js"></script>
+  <script type="text/javascript" src="js/fixed-block.js"></script>
+  <script type="text/javascript" src="js/cart.js"></script>
+</body>
+</html>
